@@ -1,0 +1,25 @@
+<div class="row">
+
+    <div class="col-md-4 offset-md-4">
+
+        <form [formGroup]="formdata" class="form-group" (ngSubmit)="onClicklogin(formdata);">
+            
+          <label>User Name:</label>
+                <input type="text" name="username" class="form-control" formControlName="username">
+            
+           
+                <label>Password:</label>
+                      <input type="password" name="pass" class="form-control" formControlName="pass">
+              
+          <br>
+          <input type="submit" name="submit" value="LogIn" class="btn btn-primary">
+           
+          
+          <input type="button" value="Cancel" class="btn" (click)="clear();">
+           
+          </form>
+{{formdata.value|json}}
+
+    </div>
+
+</div>
